@@ -10,12 +10,10 @@ from langchain.callbacks import get_openai_callback
 #from dotenv import load_dotenv
 
 openai.api_key = st.secrets["OPENAI_API_KEY"]
-openai= st.secrets["OPENAI_API_KEY"]
+OPENAI_API_KEY= st.secrets["OPENAI_API_KEY"]
 
 def main():
     # load_dotenv()
-    openai.api_key = st.secrets["OPENAI_API_KEY"]
-    openai= st.secrets["OPENAI_API_KEY"]
     st.set_page_config(page_title="Document Assistant")
     st.header("Doc Assist 💬")
     
