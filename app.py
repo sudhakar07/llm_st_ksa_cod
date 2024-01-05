@@ -9,7 +9,6 @@ from langchain.llms import OpenAI
 from langchain.callbacks import get_openai_callback
 #from dotenv import load_dotenv
 
-openai.api_key = st.secrets["OPENAI_API_KEY"]
 OPENAI_API_KEY= st.secrets["OPENAI_API_KEY"]
 
 def main():
