@@ -1,4 +1,4 @@
-from dotenv import load_dotenv
+
 import streamlit as st
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
@@ -7,12 +7,14 @@ from langchain.vectorstores import FAISS
 from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
 from langchain.callbacks import get_openai_callback
+#from dotenv import load_dotenv
 
 
 def main():
-    load_dotenv()
-    st.set_page_config(page_title="Ask your PDF")
-    st.header("Ask your PDF 💬")
+    # load_dotenv()
+    openai.api_key = st.secrets["OPENAI_API_KEY"]
+    st.set_page_config(page_title="Document Assistant")
+    st.header("Doc Assist 💬")
     
     # upload file
     pdf = st.file_uploader("Upload your PDF", type="pdf")
@@ -38,7 +40,7 @@ def main():
       knowledge_base = FAISS.from_texts(chunks, embeddings)
       
       # show user input
-      user_question = st.text_input("Ask a question about your PDF:")
+      user_question = st.text_input("Extract Doc info - Ask a question")
       if user_question:
         docs = knowledge_base.similarity_search(user_question)
         
@@ -46,7 +48,7 @@ def main():
         chain = load_qa_chain(llm, chain_type="stuff")
         with get_openai_callback() as cb:
           response = chain.run(input_documents=docs, question=user_question)
-          print(cb)
+          st.info(cb)
            
         st.write(response)
     
