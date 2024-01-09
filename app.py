@@ -50,7 +50,7 @@ def main():
           response = chain.run(input_documents=docs, question=user_question)
           st.write(cb)
            
-        st.success("Response : ")
+        st.write("Response : ")
         st.success(response)
         
     
