@@ -50,7 +50,7 @@ def main():
           response = chain.run(input_documents=docs, question=user_question)
           st.info(cb)
            
-        st.write(response)
+        st.success(response)
     
 
 if __name__ == '__main__':
