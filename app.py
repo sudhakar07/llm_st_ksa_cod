@@ -14,7 +14,7 @@ OPENAI_API_KEY= st.secrets["OPENAI_API_KEY"]
 def main():
     # load_dotenv()
     st.set_page_config(page_title="Document Assistant")
-    st.header("Doc Assist 💬")
+    st.header("Gen-AI Doc Assist 💬")
     
     # upload file
     pdf = st.file_uploader("Upload your PDF", type="pdf")
