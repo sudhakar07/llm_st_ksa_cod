@@ -48,7 +48,7 @@ def main():
         chain = load_qa_chain(llm, chain_type="stuff")
         with get_openai_callback() as cb:
           response = chain.run(input_documents=docs, question=user_question)
-          st.info(cb)
+          st.write(cb)
            
         st.success(response)
     
