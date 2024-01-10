@@ -11,6 +11,14 @@ from langchain.callbacks import get_openai_callback
 
 OPENAI_API_KEY= st.secrets["OPENAI_API_KEY"]
 
+hide_st_style = """ <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            #viewerBadge_link__qRIco {visibility: hidden;}
+            viewerBadge_link__qRIco {visibility: hidden;}
+            </style>"""
+
 
 
 def main():
