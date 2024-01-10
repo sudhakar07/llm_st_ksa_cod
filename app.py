@@ -11,17 +11,7 @@ from langchain.callbacks import get_openai_callback
 
 OPENAI_API_KEY= st.secrets["OPENAI_API_KEY"]
 
-hide_st_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            header {visibility: hidden;}
-            #viewerBadge_link__qRIco {visibility: hidden;}
-            viewerBadge_link__qRIco {visibility: hidden;}
-            </style>
-           
-            """
-st.markdown(hide_st_style, unsafe_allow_html=True)
+
 
 def main():
     # load_dotenv()
@@ -68,4 +58,15 @@ def main():
     
 
 if __name__ == '__main__':
+    hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            #viewerBadge_link__qRIco {visibility: hidden;}
+            viewerBadge_link__qRIco {visibility: hidden;}
+            </style>
+           
+            """
+    st.markdown(hide_st_style, unsafe_allow_html=True)
     main()
