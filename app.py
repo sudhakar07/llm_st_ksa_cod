@@ -24,6 +24,7 @@ hide_st_style = """ <style>
 def main():
     # load_dotenv()
     st.markdown(hide_st_style, unsafe_allow_html=True)
+    st.sidebar.write("Only for learning purpose. Developed by - Sudhakar G")
     #st.set_page_config(page_title="Document Assistant")
     st.header("Gen-AI Doc Assist 💬")
     
