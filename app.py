@@ -25,7 +25,7 @@ def main():
     # load_dotenv()
     st.markdown(hide_st_style, unsafe_allow_html=True)
     
-    st.sidebar.write("Developed by - Sudhakar G.")
+    st.sidebar.info("Developed by - Sudhakar G.")
     st.sidebar.info("Only for Learning Purpose.")
     #st.set_page_config(page_title="Document Assistant")
     st.header("Gen-AI Doc Assist 💬")
